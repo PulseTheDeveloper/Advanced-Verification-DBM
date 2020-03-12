@@ -1,0 +1,75 @@
+{
+  "name": "verifymember",
+  "permissions": "MANAGE_NICKNAMES",
+  "restriction": "1",
+  "_id": "WjpHb",
+  "actions": [
+    {
+      "info": "0",
+      "find": "687459739205894154",
+      "storage": "1",
+      "varName": "role",
+      "name": "Find Role"
+    },
+    {
+      "member": "0",
+      "varName2": "${tempVars(\"member.name\")}",
+      "role": "3",
+      "varName": "role",
+      "name": "Add Member Role"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "title": "__**Verified!**__",
+      "author": "",
+      "color": "a6fffd",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "message.reply",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "message.reply",
+      "message": "Congrats.... ${mentionedUser} has now been verified!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "message.reply",
+      "message": "Verification System",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "message.reply",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "event-type": "28",
+  "temp": "reaction"
+}
