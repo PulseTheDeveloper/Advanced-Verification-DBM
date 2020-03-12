@@ -1,0 +1,121 @@
+{
+  "name": "setupchannel",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "GKjsa",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Were setting up the verify channel.... one moment.",
+      "storage": "1",
+      "varName2": "setup.message",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "time": "3",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channelName": "verify",
+      "categoryID": "687728767199739957",
+      "topic": "Verify Yourself!",
+      "position": "",
+      "storage": "1",
+      "varName": "verify.channel",
+      "name": "Create Text Channel"
+    },
+    {
+      "info": "0",
+      "find": "687458925255196704",
+      "storage": "1",
+      "varName": "everyone",
+      "name": "Find Role"
+    },
+    {
+      "info": "0",
+      "find": "687459739205894154",
+      "storage": "1",
+      "varName": "verified",
+      "name": "Find Role"
+    },
+    {
+      "channel": "3",
+      "varName": "verify.channel",
+      "role": "3",
+      "varName2": "everyone",
+      "permission": "READ_MESSAGE_HISTORY",
+      "state": "2",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "verify.channel",
+      "role": "3",
+      "varName2": "everyone",
+      "permission": "SEND_MESSAGES",
+      "state": "0",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "verify.channel",
+      "role": "3",
+      "varName2": "everyone",
+      "permission": "READ_MESSAGES",
+      "state": "0",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "verify.channel",
+      "role": "3",
+      "varName2": "verified",
+      "permission": "READ_MESSAGES",
+      "state": "2",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "verify.channel",
+      "role": "3",
+      "varName2": "verified",
+      "permission": "SEND_MESSAGES",
+      "state": "2",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "storage": "1",
+      "varName": "setup.message",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Successully Stetup Verification Channel!",
+      "storage": "1",
+      "varName2": "Finished.Message",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "Finished.Message",
+      "name": "Delete Message"
+    }
+  ]
+}
