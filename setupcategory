@@ -1,0 +1,60 @@
+{
+  "name": "setupcategory",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "ZZWVp",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Were setting verify category.... one moment.",
+      "storage": "1",
+      "varName2": "setup.message",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "time": "3",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channelName": "Verification",
+      "position": "",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Category Channel"
+    },
+    {
+      "storage": "1",
+      "varName": "setup.message",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Successully Set up Verification Category! Now lets set up the channel... do !setupchannel to create it!",
+      "storage": "1",
+      "varName2": "finished.message",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "finished.message",
+      "name": "Delete Message"
+    }
+  ]
+}
