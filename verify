@@ -1,0 +1,124 @@
+{
+  "name": "verify",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "xSrJg",
+  "actions": [
+    {
+      "title": "__**Pulse Verification**__",
+      "author": "",
+      "color": "a6fffd",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "message.dm",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "message.dm",
+      "fieldName": "**React**",
+      "message": "Please react to this post with the \n👌 or `:ok_hand:` You have two \nminutes to do so, take your time.\n\n**Why?**\nReacting to this post with the\nwill allow you to see/message in \nthe allowed channels with that role!",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "message.dm",
+      "message": "Reaction",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "message.dm",
+      "channel": "1",
+      "varName2": "member.name",
+      "storage3": "1",
+      "varName3": "message.object",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "message": "1",
+      "varName": "message.object",
+      "info": "4",
+      "storage": "1",
+      "varName2": "message.channel",
+      "name": "Store Message Info"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "message.object",
+      "filter": "reaction.emoji.name === '👌'",
+      "max": "1",
+      "time": "60000",
+      "maxEmojis": "",
+      "maxUsers": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "11",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Reaction Call Action"
+    },
+    {
+      "info": "0",
+      "find": "687459739205894154",
+      "storage": "1",
+      "varName": "role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "${tempVars(\"member.name\")}",
+      "role": "3",
+      "varName": "role",
+      "name": "Add Member Role"
+    },
+    {
+      "channel": "1",
+      "varName": "member.name",
+      "message": "Congrats! You have successfully been verified!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "1",
+      "varName": "member.name",
+      "message": "You werent verifed... :sob:",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "event-type": "28",
+  "temp": "reaction"
+}
